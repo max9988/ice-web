@@ -1,0 +1,14 @@
+<?xml version="1.0" ?> 
+<project name="AntExample">
+	
+	<target name="init">
+	    <delete file="C:\\bin\\apache-tomcat-9.0.8\\webapps\\iceweb.war" />
+	    <delete dir="C:\\bin\\apache-tomcat-9.0.8\\webapps\\iceweb" />
+		
+	 <copy todir="C:\\bin\\apache-tomcat-9.0.8\\webapps">
+		<fileset file="target\\iceweb.war" />
+	 </copy>       
+  
+	</target>
+	
+</project>
