@@ -29,11 +29,18 @@
 <div id="personsDIV" class="container" ng-controller="iceCtrl" data-ng-init="getPerson()"> 
   <h3>Person Detail Info:</h3> </p>
   Person ID: {{icePersonData.id}} </p>
-  Person ID: {{icePersonData.firstName}} </p>
-  Person ID: {{icePersonData.lastName}} </p>
+  First Name: {{icePersonData.firstName}} </p>
+  Last Name: {{icePersonData.lastName}} </p>
+  A Number: {{icePersonData.defactoId}} </p>
   </p></p>
   <h3>Application Info:</h3> </p>
   Location: {{iceApplicationData[0].location}} </p>
+  </p></p>
+  <h3>Pre-Enroll Info:</h3> </p>
+  Email: {{iceEnrollData[0].email}} </p>
+  Address: {{iceEnrollData[0].address}} </p>
+  ReferralScore: {{iceEnrollData[0].referralScore}} </p>
+
 </div>
 
 <script src="scripts/iceweb.js"></script>

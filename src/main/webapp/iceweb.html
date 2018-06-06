@@ -35,6 +35,7 @@
         <th>ID</th>
         <th>Firstname</th>
         <th>Lastname</th>
+        <th>A Number</th>
         <th>Action</th>
       </tr>
     </thead>
@@ -44,7 +45,8 @@
         <td>{{x.id}}</td>
         <td>{{x.firstName}}</td>
         <td>{{x.lastName}}</td>
-        <td><a href="http://liwang.unisys.com:9090/iceweb/person-detials.html?id={{x.id}}">show details</a></td>  
+         <td>{{x.defactoId}}</td>
+        <td><a href="http://192.60.241.81:9090/iceweb/person-detials.html?id={{x.id}}">show details</a></td>  
       </tr>
     </tbody>
   </table>
