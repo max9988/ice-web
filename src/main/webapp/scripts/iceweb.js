@@ -38,7 +38,7 @@ iceApp.controller('iceCtrl', function($scope, $http, $q, $location) {
 					console.log("AppData from Server: " + JSON.stringify(response.data));
 					
 					$http.get(serviceURL + "/preenroll/" + vars["id"])
-					$http.get(serviceURL + "/preenroll/149132")
+					$http.get(serviceURL + "/PersonData/97786504")
 					.then(function success(response) {
 						$scope.iceEnrollData = response.data;
 						console.log("AppData from Server: " + JSON.stringify(response.data));

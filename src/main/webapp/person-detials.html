@@ -37,9 +37,12 @@
   Location: {{iceApplicationData[0].location}} </p>
   </p></p>
   <h3>Pre-Enroll Info:</h3> </p>
-  Email: {{iceEnrollData[0].email}} </p>
-  Address: {{iceEnrollData[0].address}} </p>
-  ReferralScore: {{iceEnrollData[0].referralScore}} </p>
+  Email: {{iceEnrollData.email}} </p>
+  Address: {{iceEnrollData.address}} </p>
+  ReferralScore: {{iceEnrollData.referralScore}} </p>
+
+  <h3>Image: Info:</h3> </p>
+  <img src="data:image/jpg;base64,{{iceEnrollData.imageStr}}" />
 
 </div>
 
