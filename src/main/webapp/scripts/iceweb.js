@@ -29,26 +29,37 @@ iceApp.controller('iceCtrl', function($scope, $http, $q, $location) {
 		$http.get(serviceURL + "/Person/" + vars["id"])
 		.then(function success(response) {
 			//$scope.icePersonData = JSON.parse(response.data);
+			//Person table data
 			$scope.icePersonData = response.data;
 			console.log("AppData from Server: " + JSON.stringify(response.data));
 			
 				$http.get(serviceURL + "/applications/" + vars["id"])
 				.then(function success(response) {
+					//application table data
 					$scope.iceApplicationData = response.data;
-					console.log("AppData from Server: " + JSON.stringify(response.data));
+					console.log("iceApplicationData from Server: " + JSON.stringify(response.data));
 					
-					$http.get(serviceURL + "/preenroll/" + vars["id"])
-					$http.get(serviceURL + "/PersonData/97786504")
-					.then(function success(response) {
-						$scope.iceEnrollData = response.data;
-						console.log("AppData from Server: " + JSON.stringify(response.data));
+					    //preenroll table data
+						//$http.get(serviceURL + "/preenroll/" + vars["id"])
+						$http.get(serviceURL + "/preenroll/149132")
+						.then(function success(response) {
+							$scope.iceEnrollData = response.data;
+							console.log("iceEnrollData from Server: " + JSON.stringify(response.data));
+
+                            //image data
+							$http.get(serviceURL + "/PersonData/97786504")
+							.then(function success(response) {
+								$scope.iceImageData = response.data;
+								console.log("iceImageData from Server: " + JSON.stringify(response.data));
+							}, function error(response) {
+					            $scope.iceImageData = response.status + " " + response.statusText + " " + response.headers();
+					        });	
+						}, function error(response) {
+				            $scope.iceEnrollData = response.status + " " + response.statusText + " " + response.headers();
+				        });	
 					}, function error(response) {
-			            $scope.icePersonData = response.status + " " + response.statusText + " " + response.headers();
-			        });	
-		        												
-				}, function error(response) {
-		            $scope.icePersonData = response.status + " " + response.statusText + " " + response.headers();
-		        });			
+			            $scope.iceApplicationData = response.status + " " + response.statusText + " " + response.headers();
+			        });				        	        													
 					
 		}, function error(response) {
             $scope.icePersonData = response.status + " " + response.statusText + " " + response.headers();

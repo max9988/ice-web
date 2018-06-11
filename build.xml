@@ -2,11 +2,11 @@
 <project name="AntExample">
 	
 	<target name="init">
-	    <delete file="C:\\bin\\apache-tomcat-9.0.8\\webapps\\iceweb.war" />
-	    <delete dir="C:\\bin\\apache-tomcat-9.0.8\\webapps\\iceweb" />
+	    <delete file="C:\\bin\\apache-tomcat-9.0.8\\webapps\\icedt.war" />
+	    <delete dir="C:\\bin\\apache-tomcat-9.0.8\\webapps\\icedt" />
 		
 	 <copy todir="C:\\bin\\apache-tomcat-9.0.8\\webapps">
-		<fileset file="target\\iceweb.war" />
+		<fileset file="target\\icedt.war" />
 	 </copy>       
   
 	</target>

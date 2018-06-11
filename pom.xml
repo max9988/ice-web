@@ -2,8 +2,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.unisys.iceweb</groupId>
-	<artifactId>iceweb</artifactId>
+	<groupId>com.unisys.icedatatable</groupId>
+	<artifactId>icedatatable</artifactId>
 	<version>0.1</version>
 	<packaging>war</packaging>
 
@@ -11,7 +11,7 @@
 	<description>Web Application </description>
 
 	<build>
-		<finalName>iceweb</finalName>
+		<finalName>icedt</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
